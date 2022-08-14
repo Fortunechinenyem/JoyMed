@@ -1,0 +1,24 @@
+{
+  "homefeatures": [
+    {
+      "id": 1,
+      "title": "Working Time",
+      "text": "We have opening and closing hours"
+    },
+    {
+      "id": 2,
+      "title": "Doctor's Time Table",
+      "text": "Our Doctors schedule"
+    },
+    {
+      "id": 3,
+      "title": "Appointments",
+      "text": "Our dedicated doctors are ready to serve you"
+    },
+    {
+      "id": 4,
+      "title": "Emergency Cases",
+      "text": "Our dedicated doctors are ready to serve you"
+    }
+  ]
+}

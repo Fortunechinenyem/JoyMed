@@ -1,27 +1,13 @@
 import React from "react";
-import Homeimage from "../images/image5.jpg";
+import { Link } from "react-router-dom";
 
 const HomeBody = () => {
   return (
-    <>
-      <div className="card mb-3 w-75 mx-auto">
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img src={Homeimage} className="" alt={Homeimage.jpg} />
-          </div>
-          <div className="col-md-8">
-            <div className="">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text1">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <div className="w-50 mx-auto">
+      <Link to="/about" className="btn btn-primary">
+        More about Clinic
+      </Link>
+    </div>
   );
 };
 

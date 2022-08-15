@@ -216,8 +216,7 @@ header {
   margin: 10 10 10 10;
   padding: 10px;
   gap: 10px;
-}
-.heroimage {
+  justify-content: space-between;
 }
 
 /* Footer */

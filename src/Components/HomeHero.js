@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function HomeHero() {
   return (
-    <div className="homehero d-flex mb-3">
+    <div className="w-100 homehero d-flex mb-3 mx-auto">
       <div className="herotext w-25">
         <h1 className="mb-4">Welcome to our Clinic</h1>
         <Link to="/about" className="btn btn-primary">

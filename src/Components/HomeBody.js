@@ -4,7 +4,7 @@ import Homeimage from "../images/image5.jpg";
 const HomeBody = () => {
   return (
     <>
-      <div className="card mb-3 w-100 mx-auto">
+      <div className="card mb-3 w-75 mx-auto">
         <div className="row g-0">
           <div className="col-md-4">
             <img src={Homeimage} className="" alt={Homeimage.jpg} />
@@ -16,9 +16,6 @@ const HomeBody = () => {
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
               </p>
             </div>
           </div>

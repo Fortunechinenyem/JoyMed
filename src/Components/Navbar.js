@@ -3,54 +3,66 @@ import logo from "../images/joylogo.svg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  // const navToggle = document.querySelector(".nav-toggle");
-  // const navLinks = document.querySelectorAll(".nav__link");
-
-  // navToggle.addEventListener("click", () => {
-  //   document.body.classList.toggle("nav-open");
-  // });
-
-  // navLinks.forEach((link) => {
-  //   link.addEventListener("click", () => {
-  //     document.body.classList.remove("nav-open");
-  //   });
-  // });
-
   return (
     <header className="d-flex">
       <div className="logo">
         <img src={logo} alt={logo.png} />
       </div>
-      <nav className="navbar bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <button
-            className="nav-toggle"
+            className="navbar-toggler"
+            type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="toggle navigation"
+            aria-label="Toggle navigation"
           >
-            <span className="hamburger"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div className=" navbar-collapse" id="navbarTogglerDemo03">
-            <ul className="nav__list me-auto mb-2 mb-lg-0">
-              <li className="nav__item">
-                <Link to="/" className="nav__link active" aria-current="page">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
               </li>
-              <li className="nav__item">
-                <Link to="/about" className="nav__link">
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
                   About
                 </Link>
               </li>
-
-              <li className="nav__item">
-                <Link to="/contact" className="nav__link">
-                  Contact
-                </Link>
+              <li className="nav-item dropdown">
+                <Link
+                  to="/about"
+                  className="nav-link dropdown-toggle"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></Link>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link to="/about" className="dropdown-item">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/appointment" className="dropdown-item">
+                      Appointment
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                </ul>
               </li>
             </ul>
+
+            <button className="btn btn-primary" type="submit">
+              Make an Appointment
+            </button>
           </div>
         </div>
       </nav>

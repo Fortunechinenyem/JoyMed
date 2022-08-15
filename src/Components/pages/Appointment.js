@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 
-const About = () => {
+const Appointment = () => {
   return (
     <article>
       <Footer />
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Appointment;

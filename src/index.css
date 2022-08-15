@@ -13,7 +13,7 @@
   --fw-reg: 400;
   --fw-bold: 700;
 
-  --clr-light: rgb(149, 174, 247);
+  --clr-light: rgb(214, 219, 237);
   --clr-dark: #020233;
   --clr-accent: #d24931;
 
@@ -40,7 +40,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   background: var(--clr-light);
   color: var(--clr-dark);
   margin: 0;
@@ -207,13 +207,19 @@ header {
 .header {
   justify-content: space-between;
 }
-.menuheader {
-  border-radius: 10px;
-}
-.card {
+
+.card-body {
   background: var(--clr-dark);
-  color: var(--clr-light);
 }
+/* home */
+.homehero {
+  margin: 10 10 10 10;
+  padding: 10px;
+  gap: 10px;
+}
+.heroimage {
+}
+
 /* Footer */
 .footer {
   background: var(--clr-dark);

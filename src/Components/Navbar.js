@@ -30,39 +30,30 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link to="/about" className="nav-link">
-                  About
+                  Who We Are
                 </Link>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  to="/about"
-                  className="nav-link dropdown-toggle"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                ></Link>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link to="/about" className="dropdown-item">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/appointment" className="dropdown-item">
-                      Appointment
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                </ul>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  Medical Team
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  Specialties
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  News Hub
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  Contact Us
+                </Link>
               </li>
             </ul>
-
-            <button className="btn btn-primary" type="submit">
-              Make an Appointment
-            </button>
           </div>
         </div>
       </nav>

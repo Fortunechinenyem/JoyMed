@@ -17,7 +17,7 @@
   --clr-dark: #020233;
   --clr-accent: #d24931;
   --clr-alternate: #2a45f6;
-  --clr-sisi: #272a41;
+  --clr-sisi: #00283f;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -128,12 +128,17 @@ header {
   justify-content: space-between;
   color: var(--clr-accent);
 }
+/* About */
+.card-body1 {
+  background: var(--clr-light);
+}
 
 /* Footer */
 .footer {
   background: var(--clr-dark);
-  color: var(--clr-accent);
+  color: var(--clr-light);
   text-align: center;
+  align-content: center;
   padding: 2.5em 0;
   font-size: var(--fs-h3);
 }
@@ -159,6 +164,7 @@ header {
 .social-list {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 2em 0 0;
   padding: 0;

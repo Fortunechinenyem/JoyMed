@@ -1,64 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
-
-const NavBar2 = () => {
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink,
+} from "./NavbarElements";
+import logo from "../images/joylogo.svg";
+const Navbar2 = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
-    <header className="nav2">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link
-                  to="/about"
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/appointment" className="nav-link">
-                  Book Appointment
-                </Link>
-              </li>
-              <li className="nav-item">
-                <ul className="social-list">
-                  <li className="social-list__item">
-                    <a className="social-list__link" href="http://linkedin.com">
-                      <i className="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                  <li className="social-list__item">
-                    <a className="social-list__link" href="https://twitter.com">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li className="social-list__item">
-                    <a
-                      className="social-list__link"
-                      href="https://whatsapp.com"
-                    >
-                      <i className="fab fa-whatsapp"></i>
-                    </a>
-                  </li>
-                  <li className="social-list__item">
-                    <a
-                      className="social-list__link"
-                      href="https://facebook.com"
-                    >
-                      <i className="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+    <header>
+      <div className="logo">
+        <img src={logo} alt={logo.png} />
+      </div>
+      <Nav>
+        <div className="hamburger">
+          <Bars
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded);
+            }}
+          />
         </div>
-      </nav>
+
+        <NavMenu
+          className={
+            isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+          }
+        >
+          <NavLink to="/about" activeStyle>
+            Home
+          </NavLink>
+          <NavLink to="/events" activeStyle>
+            Who We Are
+          </NavLink>
+          <NavLink to="/annual" activeStyle>
+            Medical Team
+          </NavLink>
+          <NavLink to="/team" activeStyle>
+            Specialties
+          </NavLink>
+          <NavLink to="/blogs" activeStyle>
+            Contact US
+          </NavLink>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+        </NavBtn>
+      </Nav>
     </header>
   );
 };
 
-export default NavBar2;
+export default Navbar2;
